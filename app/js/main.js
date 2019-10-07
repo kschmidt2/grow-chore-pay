@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 text: null
             },
             data: {
-                googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+                googleSpreadsheetKey: '1k0nOmtSdWLOChtJBgG2Uia6RBv79d-P40bGaQ45I7wE'
             },
             // for bar charts only
             plotOptions: {
@@ -59,11 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             //     }
             // },
             legend: {
-                align: 'right',
-                symbolRadius: 0,
-                verticalAlign: 'top',
-                x: 10,
-                itemMarginTop: -10
+                enabled: false
             },
             xAxis: {
                 labels: {
@@ -78,14 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 labels: {
                     useHTML: true,
                     overflow: 'allow'
-                }
+                },
+                max: 6
             },
             credits: {
                 enabled: false
             },
             tooltip: {
                 shadow: false,
-                padding: 10
+                padding: 10,
+                valuePrefix: '$'
             },
             responsive: {
                 rules: [{
@@ -107,5 +105,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 }]
             }
         });
-    });
-}, 1000);
+    }, 1000);
+});
